@@ -130,8 +130,8 @@ for row_i = 1:rows
             PCT_NAT_PFT(row_i,col_i, LC_i+1) = 100;
         elseif LC_i>=13 && LC_i<=14
             PCT_NATVEG(row_i,col_i) = 100;
-            PCT_NAT_PFT(row_i,col_i, 13+1) = 1-(LC_i - 13);
-            PCT_NAT_PFT(row_i,col_i, 14+1) = LC_i - 13;
+            PCT_NAT_PFT(row_i,col_i, 13+1) = (1-(LC_i - 13))*100;
+            PCT_NAT_PFT(row_i,col_i, 14+1) = (LC_i - 13)*100;
         elseif LC_i == 16 %wetland
             PCT_WETLAND(row_i,col_i) = 100;
             PCT_NAT_PFT( row_i,col_i, 1) = 100;
