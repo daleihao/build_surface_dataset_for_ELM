@@ -9,3 +9,6 @@ process_data_1km.m
 ## 3. Build surface data file
 build_1km_dataset.m
 
+## Refernence
+Hao, D., Bisht, G., Huang, M., Ma, P.-L., Tesfa, T. K., Lee, W.-L., Gu, Y., and Leung, L. R.: Impacts of sub-grid topographic representations on surface energy balance and boundary conditions in the E3SM Land Model, Earth and Space Science Open Archive, doi: doi:10.1002/essoar.10508175.1, 2021b. 37, 2021b.
+
