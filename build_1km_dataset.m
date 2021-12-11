@@ -161,8 +161,8 @@ for row_i = 1:rows
         
         total_new = clay_new + sand_new + silt_new;
         if(total_new>0)
-            clay_new = clay_new./total_new;
-            sand_new = sand_new./total_new;
+            clay_new = clay_new./total_new*100;
+            sand_new = sand_new./total_new*100;
         end
         PCT_CLAY(row_i,col_i, :) = clay_new;
         PCT_SAND(row_i,col_i, :) = sand_new;
