@@ -1,4 +1,4 @@
-# Build surfae dataset for ELM using data from GEE
+# Build surface dataset for ELM using data from GEE
 
 ## 1. GEE data download
 https://code.earthengine.google.com/50c31a9aecd849caad6be5974e9da716
