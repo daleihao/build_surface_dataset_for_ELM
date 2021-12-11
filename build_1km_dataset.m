@@ -75,7 +75,7 @@ Clays(Clays<0) = nan;
 Doms(Doms<0) = nan;
 Sands(Sands<0) = nan;
 
-%% soil depth definitation
+%% soil depth definition
 z_new = 0.025 *(exp(0.5*((1:10)-0.5))-1);
 z_old = [2.5 10 22.5 45 80 150]/100;
 
