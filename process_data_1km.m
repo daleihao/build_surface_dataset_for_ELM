@@ -392,13 +392,13 @@ for row = 1:rows
         elseif pft_i==6 % grass
             if GDD(row, col)<1000
                 LC_ELM_Data(row, col) = 12;
-            else %% C3/C4
+            else %% C3/C4 fraction based on section 3.4 at Still et al. (2003)
                 Prec_tmp = [Prec_1(row, col) Prec_2(row, col) Prec_3(row, col) Prec_4(row, col) Prec_5(row, col) Prec_6(row, col) ...
                     Prec_7(row, col) Prec_8(row, col) Prec_9(row, col) Prec_10(row, col) Prec_11(row, col) Prec_12(row, col) ];
                 Tavg_tmp = squeeze(Tavg_all(row, col, :))';
                 LAI_tmp = [LAI_1_Data(row, col) LAI_2_Data(row, col) LAI_3_Data(row, col) LAI_4_Data(row, col) LAI_5_Data(row, col) LAI_6_Data(row, col) ...
                     LAI_7_Data(row, col) LAI_8_Data(row, col) LAI_9_Data(row, col) LAI_10_Data(row, col) LAI_11_Data(row, col) LAI_12_Data(row, col) ];
-                frac_tmp = nansum(LAI_tmp(Prec_tmp>=25 & Tavg_tmp>=22))/nansum(LAI_tmp(Prec_tmp>=25));
+                frac_tmp = nansum(LAI_tmp(Prec_tmp>=25 & Tavg_tmp>=22))/nansum(LAI_tmp(Prec_tmp>=25)); % different from Still et al. (2003), we use LAI rather than NDVI. Specifically, the C4 fraction of a grid cell was weighted by the sum of NDVI values in C4 climate months divided by the sum of NDVI values during the entiregrowing season.
                 
                 if isnan(frac_tmp) || frac_tmp<0
                     frac_tmp = 0;
